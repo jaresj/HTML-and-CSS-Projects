@@ -29,38 +29,62 @@
 		<!--END HOME-->
 		
 		<!--DESTINATIONS -->
-		<section>
 			<div id="destinations">
 				<h1>Destinations</h1>
-				<div>
-					<h3> Machu Picchu </h3>
-					<div>
-						<img src="./images/thumb/thumbnail_1.jpg" alt="A llama at Machu Picchu">
+				<div class="row">
+					<div class="column">
+						<img src="./images/thumb/thumbnail_1.jpg" style="width: 100%;" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
 					</div>
-					<div>
-					<iframe width="650" height="366" src="https://www.youtube.com/embed/cnMa-Sm9H4k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="column">
+						<img src="./images/thumb/thumbnail_2.jpg" style="width: 100%;" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
 					</div>
-				</div>
-				<div>
-					<h3>London</h3>
-					<div>
-						<img src="./images/thumb/thumbnail_2.jpg" alt="London skyline">
-					</div>
-					<div>
-						<iframe width="650" height="366" src="https://www.youtube.com/embed/45ETZ1xvHS0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="column">
+						<img src="./images/thumb/thumbnail_3.jpg" style="width: 100%;" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
 					</div>
 				</div>
-				<div>
-					<h3>Maldives</h3>
-					<div>
-						<img src="./images/thumb/thumbnail_3.jpg" alt="A beautiful ocean">
-					</div>
-					<div>
-						<iframe width="650" height="366" src="https://www.youtube.com/embed/GIimOIZy-RA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+				<!--Lightbox-->
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+						
+						<div class="mySlides">
+							<div class="numbertext">1 / 3</div>
+							<img src="./images/thumb/thumbnail_1_wide.jpg" alt="Macchu Picchu" style="width: 100%;">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext">2 / 3</div>
+							<img src="./images/thumb/thumbnail_2_wide.jpg" alt="London" style="width: 100%;">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext">3 / 3</div>
+							<img src="./images/thumb/thumbnail_3_wide.jpg" alt="Maldives" style="width: 100%;">
+						</div>
+
+						<!--Next/Previous controls-->
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+						<!--Caption text-->
+						<div class="caption-container">
+							<p id="caption"></p>
+						</div>
+
+						<!--Thumbnail image controls-->
+						<div class="column">
+							<img class="tn_image cursor" src="./images/thumb/thumbnail_1.jpg" style="width: 100%;" onclick="currentSlide(1)" alt="Macchu Picchu">
+						</div>
+						<div class="column">
+							<img class="tn_image cursor" src="./images/thumb/thumbnail_2.jpg" style="width: 100%;" onclick="currentSlide(2)" alt="London">
+						</div>
+						<div class="column">
+							<img class="tn_image cursor" src="./images/thumb/thumbnail_3.jpg" style="width: 100%;" onclick="currentSlide(3)" alt="Maldives">
+						</div>
 					</div>
 				</div>
 			</div>
-		</section>
 		<!--END DESTINATIONS -->
 		
 		<!-- CONTACT -->
@@ -89,6 +113,8 @@
 			</div>
 		</section>
 		<!-- END CONTACT -->
+
+	<script src="./JS/one_page_website.js"></script>
 	</body>
 	<footer>Justice's 2020's Travel Plans</footer>
 </html>	
